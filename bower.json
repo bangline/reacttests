@@ -1,0 +1,19 @@
+{
+  "name": "capasa",
+  "version": "0.1.0",
+  "authors": [
+    "Dave Kennedy <david@bangline.co.uk>"
+  ],
+  "description": "Capasa",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

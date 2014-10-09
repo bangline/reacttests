@@ -1,0 +1,25 @@
+{
+  "name": "capasa",
+  "version": "0.1.0",
+  "description": "Frontend for Capasa",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build-dev": "browserify -e app/app.jsx -t reactify -o app.bundle.js -d",
+    "watch": "watchify -e app/app.jsx -t reactify -o app.bundle.js -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "express": "4.x",
+    "react": "^0.11.2"
+  },
+  "devDependencies": {
+    "browserify": "^6.0.3",
+    "nodemon": "^1.2.1",
+    "reactify": "^0.14.0",
+    "watchify": "^2.0.0"
+  }
+}
