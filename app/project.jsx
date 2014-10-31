@@ -36,6 +36,12 @@ var Project = React.createClass({
     var team = _.reject(this.state.team, {name: member.name});
     this.setState({team: team});
   },
+  addTeamMember: function(member) {
+    console.log('Adding to team');
+    var team = this.state.team;
+    team.push(member);
+    this.setState({team: team});
+  },
   render: function() {
     var header;
     if(this.state.edit) {
@@ -43,7 +49,7 @@ var Project = React.createClass({
         <div className="editProject">
           <h3><input type="text" value={this.state.name} onChange={this.updateProjectName} /></h3>
           <a onClick={this.finishedEdit} className="done">Done</a>
-          <Team data={this.state.team} editable={true} removeHandler={this.removeTeamMember} />
+          <Team data={this.state.team} editable={true} removeHandler={this.removeTeamMember} addHandler={this.addTeamMember} />
         </div>
       );
     } else {

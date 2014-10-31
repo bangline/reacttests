@@ -24,6 +24,11 @@ app.get('/projects.json', function(req, res) {
   res.send(JSON.stringify(allProjects));
 });
 
+app.get('/team.json', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(fullTeam));
+});
+
 app.put('/projects/:id', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   project = _.find(allProjects, {name: req.param('id')});
